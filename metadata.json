@@ -1,0 +1,8 @@
+{
+  "name": "BetStream",
+  "description": "A comprehensive online casino and live sports betting platform featuring secure, integrated global payment gateway solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

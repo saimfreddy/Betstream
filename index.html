@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BetStream — Online Casino & Live Sports Betting Platform</title>
+    <meta name="description" content="A comprehensive online casino and live sports betting platform featuring secure, integrated global payment gateway solutions." />
+    <meta property="og:title" content="BetStream — Online Casino & Live Sports Betting Platform" />
+    <meta property="og:description" content="A comprehensive online casino and live sports betting platform featuring secure, integrated global payment gateway solutions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#020617" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BetStream" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // In development or when embedded in AI Studio preview iframe, ensure clean direct loading
+      if ('serviceWorker' in navigator) {
+        if (window.self !== window.top || window.location.hostname === 'localhost' || window.location.hostname.includes('run.app')) {
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (const r of registrations) {
+              r.unregister().catch(() => {});
+            }
+          }).catch(() => {});
+        } else {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
